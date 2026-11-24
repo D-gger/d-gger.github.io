@@ -4,7 +4,35 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 <style>
   :root {
+    color-scheme: light dark;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    --bg: #ffffff;
+    --text: #111827;
+    --link: #2563eb;
+    --border: #e5e7eb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117;
+      --text: #e6edf3;
+      --link: #58a6ff;
+      --border: #30363d;
+    }
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+  }
+
+  a {
+    color: var(--link);
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
   }
 </style>
 <h1>👋 Hey, I'm <a href="https://github.com/D-gger">Dagger</a>, a developer</h1>
@@ -42,7 +70,14 @@ Founder of <strong><a href="https://atherix.org">Atherix</a></strong>.</p>
 <img src="https://img.shields.io/badge/XML-0060AC?style=for-the-badge&amp;logo=xml&amp;logoColor=white" alt="XML"></p>
 <hr>
 <h2>📊 GitHub Stats</h2>
-<p><img src="https://github-stats-extended.vercel.app/api?username=D-gger&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true" alt="Stats"></p>
+<p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api?username=D-gger&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true#gh-dark-mode-only">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-stats-extended.vercel.app/api?username=D-gger&amp;show_icons=true&amp;theme=default&amp;hide_border=true#gh-light-mode-only">
+    <img src="https://github-stats-extended.vercel.app/api?username=D-gger&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true" alt="Stats">
+  </picture>
+</p>
+
 <hr>
 <h2>📫 Let's connect</h2>
 <ul>
